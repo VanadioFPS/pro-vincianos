@@ -1,6 +1,13 @@
 var express = require('express');
 var app = express();
 
+const path = require("path")
+
+app.use("/css",express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")))
+  app.use("/js",express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")))
+  app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")))
+
+
 app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
