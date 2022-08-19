@@ -19,6 +19,10 @@ app.get('/fixture', function (request, response){
     response.render('pages/fixture')
 });
 
+app.get('/guias', function (request, response){
+    response.render('pages/guias')
+});
+
 app.get('/lineups', function (request, response){
     response.render('pages/lineups')
 });
